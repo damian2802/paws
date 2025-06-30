@@ -4,15 +4,44 @@
   <meta charset="UTF-8">
   <title>Paws & Preferences</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.css">
 </head>
 <body>
-  <h1>Find Your Favourite Kitty 😺</h1>
-  <div id="card-container"></div>
-  <div id="result" class="hidden">
-    <h2>You liked these cats:</h2>
-    <div id="liked-cats"></div>
+  <nav class="navbar bg-primary">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">
+        <img src="/src/pngtree-white-paw-3d-graphic-png-image_11201718.png" alt="Logo" width="30" height="24" class="d-inline-block align-text-top">
+        Paws & Preferences
+      </a>
+    </div>
+  </nav>
+  <div class="container p-3">
+    <section id="welcome-section"></section>
   </div>
+  <div class="container p-3" id="cat-select-section" style="display: none;">
+    <h1>Select Your Favourite Kitty</h1>
+    <p>Swipe right for liked cats, left for disliked cats. Total 10 randoms cats will be shown</p>
+    <img id="cat-images" alt="Cat Image" class="square img-fluid rounded mx-auto d-block mb-4">
+  </div>
+  <div class="container p-3" id="liked-cats-section" style="display: none;">
+    <h2>You liked these cats:</h2>
+    <div id="carouselExampleIndicators" class="carousel slide">
+      <div class="carousel-indicators" id="corousel-indicators"></div>
+      <div class="carousel-inner" id="liked-cats">
+      </div>
+      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
+  </div>
+  <script src="node_modules/hammerjs/hammer.js"></script>
+  <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
+  <script src="node_modules/bootstrap/dist/js/bootstrap.js"></script>
   <script src="script.js"></script>
 </body>
 </html>
